@@ -1,5 +1,5 @@
 {
-    "name": "lisosoft/laravel-payment-gateway",
+    "name": "lisosoft/lisopay-gates-laravel-payment-gateway",
     "description": "A comprehensive payment gateway package for Laravel with support for multiple payment providers including PayFast, PayStack, PayPal, Stripe, Ozow, Zapper, Crypto, EFT, QR Code, VodaPay, and SnapScan",
     "type": "library",
     "license": "MIT",
