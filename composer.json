@@ -1,0 +1,54 @@
+{
+    "name": "lisosoft/laravel-payment-gateway",
+    "description": "A comprehensive payment gateway package for Laravel with support for multiple payment providers including PayFast, PayStack, PayPal, Stripe, Ozow, Zapper, Crypto, EFT, QR Code, VodaPay, and SnapScan",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lisosoft (Pty) Ltd",
+            "email": "info@lisosoft.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lisosoft\\PaymentGateway\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lisosoft\\PaymentGateway\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lisosoft\\PaymentGateway\\PaymentGatewayServiceProvider"
+            ],
+            "aliases": {
+                "Payment": "Lisosoft\\PaymentGateway\\Facades\\Payment"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
